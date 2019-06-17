@@ -31,3 +31,24 @@ for (let i = 0; i < myArray.length; i++) {
     emptyArray.push(myArray[i]);
   }
 
+//What is this? Does it have an equivalent in Ruby?
+//The JavaScript this keyword refers to the object it belongs to. The keyword equivelent to ir in Ruby is self.
+
+
+//The above Person class is written with ES5, now that we've learned about ES2015, 
+//convert the above code class to an ES2015 version using the new class syntax
+
+class Person {
+
+    constructor(first, last) {
+      this.first = first
+      this.last = last
+    }
+  
+    fullName() {
+      console.log(`${this.first} ${this.last}`)
+    }
+  }
+  
+  bob = new Person('Thomas', 'Ochman')
+  bob.fullName()
